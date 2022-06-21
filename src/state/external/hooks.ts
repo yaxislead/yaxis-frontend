@@ -22,6 +22,7 @@ import {
 import { TLiquidityPools } from '../../constants/type'
 import { numberToFloat } from '../../utils/number'
 import { useBlockNumber } from '../application'
+import { useYaxisManager } from '../internal/hooks'
 
 const REWARD_INTERFACE = new ethers.utils.Interface(abis.RewardsABI)
 
@@ -489,7 +490,9 @@ export function useCurveAPYAvalanche(name: TCurveLPContractsA) {
 			.plus(crvAPR)
 			.plus(wavaxAPR)
 			.plus(extraAPR)
-
+		if (totalAPR.c[0] == 1) {
+			totalAPR.c[0] = 0.01
+		}
 		return {
 			extraAPR,
 			crvAPR,
@@ -555,11 +558,11 @@ export function useAaveAPYAvalanche(name: TAaveLPContractsA) {
 export function useTraderJoeAPYAvalanche(name: TTraderJoeLPContractsA) {
 	const { contracts } = useContracts()
 
-	if (name !== 'joewavax') throw new Error('not supported')
+	//if (name !== 'joewavax' && name !== 'wethavax') throw new Error('not supported')
 
 	const [poolInfo, joePerSec, totalAllocPoint] =
 		useSingleContractMultipleMethods(contracts?.external['joeMasterChef'], [
-			['poolInfo', [0]],
+			['poolInfo', [6]],
 			['joePerSec'],
 			['totalAllocPoint'],
 		])
@@ -600,9 +603,10 @@ export function useTraderJoeAPYAvalanche(name: TTraderJoeLPContractsA) {
 			.multipliedBy(365)
 
 		joeAPR = tokenPerYear.multipliedBy(prices?.joe).dividedBy(virtualSupply)
-
-		const totalAPR = new BigNumber(0).plus(joeAPR).plus(extraAPR)
-
+		const fee = useYaxisManager();
+		const treasuryFee = new BigNumber(fee.treasuryFee).dividedBy(100)
+		// console.log(treasuryFee, 'fee')
+		const totalAPR = new BigNumber(0).plus(joeAPR).plus(extraAPR).minus(treasuryFee.c[0])
 		return {
 			extraAPR,
 			joeAPR,

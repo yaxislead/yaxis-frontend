@@ -1240,6 +1240,7 @@ export function useBoosts(): useUserBoostReturn {
 	const tricrypto = useUserBoost('tricrypto')
 	const frax = useUserBoost('frax')
 	const yaxis = useUserBoost('yaxis')
+	const steth = useUserBoost('steth')
 
 	/** Avalanche */
 	const av3crv = useUserBoost('av3crv')
@@ -1247,6 +1248,16 @@ export function useBoosts(): useUserBoostReturn {
 	const avax = useUserBoost('avax')
 	const wavax = useUserBoost('avax')
 	const joewavax = useUserBoost('joewavax')
+	const wethavax = useUserBoost('wethavax')
+	const usdcusdc = useUserBoost('usdcusdc')
+	const avaxlink = useUserBoost('avaxlink')
+	const avaxusdt = useUserBoost('avaxusdt')
+	const avaxptp = useUserBoost('avaxptp')
+	const avaxgohm = useUserBoost('avaxgohm')
+	const avaxsavax = useUserBoost('avaxsavax')
+	const avaxwbtc = useUserBoost('avaxwbtc')
+	const usdcjoe = useUserBoost('usdcjoe')
+	const avaxusdc = useUserBoost('avaxusdc')
 
 	return useMemo(() => {
 		return {
@@ -1263,6 +1274,17 @@ export function useBoosts(): useUserBoostReturn {
 			avax,
 			wavax,
 			joewavax,
+			wethavax,
+			usdcusdc,
+			avaxlink,
+			avaxusdt,
+			avaxptp,
+			avaxgohm,
+			avaxsavax,
+			avaxwbtc,
+			usdcjoe,
+			avaxusdc,
+			steth,
 		}
 	}, [
 		usd,
@@ -1276,6 +1298,17 @@ export function useBoosts(): useUserBoostReturn {
 		avax,
 		wavax,
 		joewavax,
+		wethavax,
+		usdcusdc,
+		avaxlink,
+		avaxusdt,
+		avaxptp,
+		avaxgohm,
+		avaxsavax,
+		avaxwbtc,
+		usdcjoe,
+		avaxusdc,
+		steth,
 	])
 }
 
