@@ -8,6 +8,7 @@
 		"url": "https://github.com/yaxis-project/yaxis-frontend.git"
 	},
 	"dependencies": {
+		"@ant-design/icons": "^4.7.0",
 		"@babel/runtime": "^7.17.2",
 		"@data-ui/sparkline": "^0.0.84",
 		"@davatar/react": "^1.8.1",

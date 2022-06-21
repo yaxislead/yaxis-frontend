@@ -241,6 +241,7 @@ export function useVaultsAPR() {
 	const tricrypto = useVaultRewards('tricrypto', 'ethereum')
 	const cvx = useVaultRewards('cvx', 'ethereum')
 	const yaxis = useVaultRewards('yaxis', 'ethereum')
+	const steth = useVaultRewards('steth', 'ethereum')
 
 	const mim3crv = useConvexAPY('mim3crv')
 	const rencrv = useConvexAPY('rencrv')
@@ -249,17 +250,38 @@ export function useVaultsAPR() {
 	const crvcvxeth = useConvexAPY('crvcvxeth', true)
 	const crv3crypto = useConvexAPY('crv3crypto', true)
 	const frax3crv = useConvexAPY('frax3crv')
+	const stethcrv = useConvexAPY('stethcrv')
 
 	/* AVALANCHE */
 	const av3crvAvalanche = useVaultRewards('av3crv', 'avalanche')
 	const atricryptoAvalanche = useVaultRewards('atricrypto', 'avalanche')
 	const avaxAvalanche = useVaultRewards('avax', 'avalanche')
 	const joewavaxAvalanche = useVaultRewards('joewavax', 'avalanche')
+	const wethavaxAvalanche = useVaultRewards('wethavax', 'avalanche')
+	const usdcusdcAvalanche = useVaultRewards('usdcusdc', 'avalanche')
+	const avaxlinkAvalanche = useVaultRewards('avaxlink', 'avalanche')
+	const avaxusdtAvalanche = useVaultRewards('avaxusdt', 'avalanche')
+	const avaxptpAvalanche = useVaultRewards('avaxptp', 'avalanche')
+	const avaxgohmAvalanche = useVaultRewards('avaxgohm', 'avalanche')
+	const avaxsavaxAvalanche = useVaultRewards('avaxsavax', 'avalanche')
+	const avaxwbtcAvalanche = useVaultRewards('avaxwbtc', 'avalanche')
+	const usdcjoeAvalanche = useVaultRewards('usdcjoe', 'avalanche')
+	const avaxusdcAvalanche = useVaultRewards('avaxusdc', 'avalanche')
 
 	const av3crv = useCurveAPYAvalanche('av3crv')
 	const atricrypto = useCurveAPYAvalanche('atricrypto')
 	const avax = useAaveAPYAvalanche('avax')
 	const joewavax = useTraderJoeAPYAvalanche('joewavax')
+	const wethavax = useTraderJoeAPYAvalanche('wethavax')
+	const usdcusdc = useTraderJoeAPYAvalanche('usdcusdc')
+	const avaxlink = useTraderJoeAPYAvalanche('avaxlink')
+	const avaxusdt = useTraderJoeAPYAvalanche('avaxusdt')
+	const avaxptp = useTraderJoeAPYAvalanche('avaxptp')
+	const avaxgohm = useTraderJoeAPYAvalanche('avaxgohm')
+	const avaxsavax = useTraderJoeAPYAvalanche('avaxsavax')
+	const avaxwbtc = useTraderJoeAPYAvalanche('avaxwbtc')
+	const usdcjoe = useTraderJoeAPYAvalanche('usdcjoe')
+	const avaxusdc = useTraderJoeAPYAvalanche('avaxusdc')
 
 	return useMemo(() => {
 		const output: ReturnVaultsAPR = {
@@ -291,6 +313,76 @@ export function useVaultsAPR() {
 						max: joewavaxAvalanche.maxAPR,
 					},
 					strategy: joewavax,
+				},
+				wethavax: {
+					yaxisAPR: {
+						min: wethavaxAvalanche.minAPR,
+						max: wethavaxAvalanche.maxAPR,
+					},
+					strategy: wethavax,
+				},
+				usdcusdc: {
+					yaxisAPR: {
+						min: usdcusdcAvalanche.minAPR,
+						max: usdcusdcAvalanche.maxAPR,
+					},
+					strategy: usdcusdc,
+				},
+				avaxlink: {
+					yaxisAPR: {
+						min: avaxlinkAvalanche.minAPR,
+						max: avaxlinkAvalanche.maxAPR,
+					},
+					strategy: avaxlink,
+				},
+				avaxusdt: {
+					yaxisAPR: {
+						min: avaxusdtAvalanche.minAPR,
+						max: avaxusdtAvalanche.maxAPR,
+					},
+					strategy: avaxusdt,
+				},
+				avaxptp: {
+					yaxisAPR: {
+						min: avaxptpAvalanche.minAPR,
+						max: avaxptpAvalanche.maxAPR,
+					},
+					strategy: avaxptp,
+				},
+				avaxgohm: {
+					yaxisAPR: {
+						min: avaxgohmAvalanche.minAPR,
+						max: avaxgohmAvalanche.maxAPR,
+					},
+					strategy: avaxgohm,
+				},
+				avaxsavax: {
+					yaxisAPR: {
+						min: avaxsavaxAvalanche.minAPR,
+						max: avaxsavaxAvalanche.maxAPR,
+					},
+					strategy: avaxsavax,
+				},
+				avaxwbtc: {
+					yaxisAPR: {
+						min: avaxwbtcAvalanche.minAPR,
+						max: avaxwbtcAvalanche.maxAPR,
+					},
+					strategy: avaxwbtc,
+				},
+				usdcjoe: {
+					yaxisAPR: {
+						min: usdcjoeAvalanche.minAPR,
+						max: usdcjoeAvalanche.maxAPR,
+					},
+					strategy: usdcjoe,
+				},
+				avaxusdc: {
+					yaxisAPR: {
+						min: avaxusdcAvalanche.minAPR,
+						max: avaxusdcAvalanche.maxAPR,
+					},
+					strategy: avaxusdc,
 				},
 			},
 			ethereum: {
@@ -350,6 +442,13 @@ export function useVaultsAPR() {
 					},
 					strategy: null,
 				},
+				steth: {
+					yaxisAPR: {
+						min: steth.minAPR,
+						max: steth.maxAPR,
+					},
+					strategy: null,
+				},
 			},
 		}
 		return output
@@ -369,6 +468,8 @@ export function useVaultsAPR() {
 		crvcvxeth,
 		crv3crypto,
 		frax3crv,
+		steth,
+		stethcrv,
 	])
 }
 
@@ -385,6 +486,7 @@ export function useVaults(): useVaultsReturn {
 	const frax = useVault('frax')
 	const tricrypto = useVault('tricrypto')
 	const cvx = useVault('cvx')
+	const steth = useVault('steth')
 	const yaxis = useYaxisGauge()
 
 	/** AVALANCHE  */
@@ -392,6 +494,16 @@ export function useVaults(): useVaultsReturn {
 	const atricrypto = useVault('atricrypto')
 	const avax = useVault('avax')
 	const joewavax = useVault('joewavax')
+	const wethavax = useVault('wethavax')
+	const usdcusdc = useVault('usdcusdc')
+	const avaxlink = useVault('avaxlink')
+	const avaxusdt = useVault('avaxusdt')
+	const avaxptp = useVault('avaxptp')
+	const avaxgohm = useVault('avaxgohm')
+	const avaxsavax = useVault('avaxsavax')
+	const avaxwbtc = useVault('avaxwbtc')
+	const usdcjoe = useVault('usdcjoe')
+	const avaxusdc = useVault('avaxusdc')
 
 	return useMemo(() => {
 		return {
@@ -407,6 +519,17 @@ export function useVaults(): useVaultsReturn {
 			atricrypto,
 			avax,
 			joewavax,
+			wethavax,
+			usdcusdc,
+			avaxlink,
+			avaxusdt,
+			avaxptp,
+			avaxgohm,
+			avaxsavax,
+			avaxwbtc,
+			usdcjoe,
+			avaxusdc,
+			steth,
 		}
 	}, [
 		usd,
@@ -421,6 +544,16 @@ export function useVaults(): useVaultsReturn {
 		atricrypto,
 		avax,
 		joewavax,
+		wethavax,
+		usdcusdc,
+		avaxlink,
+		avaxusdt,
+		avaxptp,
+		avaxgohm,
+		avaxsavax,
+		avaxwbtc,
+		usdcjoe,
+		avaxusdc,
 	])
 }
 
