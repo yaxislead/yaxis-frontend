@@ -323,7 +323,7 @@ const DepositHelperTable: React.FC<DepositHelperTableProps> = ({
 	const [balances, loading] = useAllBalances()
 
 	const apr = useVaultsAPRWithBoost()
-
+	console.log(apr, '-----------')
 	const { contracts } = useContracts()
 	const { md } = useBreakpoint()
 
