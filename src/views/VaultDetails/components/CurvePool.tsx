@@ -36,19 +36,14 @@ const CurvePool: React.FC<Props> = ({ vault }) => {
 					if (vaultData.token.toUpperCase() != 'WAVAX') {
 						return (
 							<Text>
-								This Vault accepts{' '}
-								{vaultData.token.toUpperCase()} deposits, a{' '}
-								{vaultData.token.toUpperCase() == 'JOEWAVAX'
-									? 'TraderJoe'
-									: 'Curve.fi'}{' '}
-								Liquidity Pool token.
+								This Vault accepts {vaultData.token.toUpperCase()} deposits,
+								a {vaultData.token.toUpperCase() == "JOEWAVAX" ? "TraderJoe" : "Curve.fi"} Liquidity Pool token.
 							</Text>
 						)
 					} else {
 						return (
 							<Text>
-								This Vault accepts{' '}
-								{vaultData.token.toUpperCase()} deposits.
+								This Vault accepts {vaultData.token.toUpperCase()} deposits.
 							</Text>
 						)
 					}
@@ -56,7 +51,7 @@ const CurvePool: React.FC<Props> = ({ vault }) => {
 			</Row>
 			<Row justify="center">
 				{(() => {
-					if (vaultData.token.toUpperCase() != 'WAVAX') {
+					if (vaultData.token.toUpperCase() != 'WAVAX'){
 						return (
 							<Text>
 								Get some by
@@ -67,9 +62,7 @@ const CurvePool: React.FC<Props> = ({ vault }) => {
 									rel="noopener noreferrer"
 								>
 									depositing your{' '}
-									{vault === 'usd'
-										? 'USD coins'
-										: vault.toUpperCase()}
+									{vault === 'usd' ? 'USD coins' : vault.toUpperCase()}
 								</TextLink>
 								.
 							</Text>

@@ -3,9 +3,8 @@ import { CalcPages, FutureBalanceCalculator } from './reducer'
 import { TLanguages } from '../../constants/translations'
 import { ChainId } from '../../constants/chains'
 
-export const updateChain = createAction<{ chainId: ChainId }>(
-	'user/updateChain',
-)
+export const updateChain =
+	createAction<{ chainId: ChainId }>('user/updateChain')
 export const updateLanguage = createAction<{ language: TLanguages }>(
 	'user/updateLanguage',
 )
