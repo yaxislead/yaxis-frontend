@@ -114,8 +114,6 @@ const VaultActionsCard: React.FC<VaultActionsCardProps> = ({
 	vaults,
 }) => {
 
-	console.log(vaults);
-
 	const translate = useTranslation()
 
 	const navigate = useNavigate()
@@ -150,11 +148,11 @@ const VaultActionsCard: React.FC<VaultActionsCardProps> = ({
 		return TABS
 	}, [type, isYaxisDetails, autoStake])
 
-	vaults = useMemo(
-		// NOTE: YAXIS vault deprecated in YIP-14
-		() => vaults.filter(([vault]) => vault === 'av3crv' || vault === 'atricrypto' || vault === 'avax' || vault === 'joewavax' || vault == 'usd' || vault == 'eth' || vault == 'btc' || vault == 'link' || vault == 'cvx' || vault == 'tricrypto' || vault == 'frax' || vault == 'steth' || vault == 'usdcjoe'),
-		[vaults],
-	)
+	// vaults = useMemo(
+	// 	// NOTE: YAXIS vault deprecated in YIP-14
+	// 	() => vaults.filter(([vault]) => vault === 'av3crv' || vault === 'atricrypto' || vault === 'avax' || vault === 'joewavax' || vault == 'usd' || vault == 'eth' || vault == 'btc' || vault == 'link' || vault == 'cvx' || vault == 'tricrypto' || vault == 'frax' || vault == 'steth' || vault == 'usdcjoe'),
+	// 	[vaults],
+	// )
 	
 	const vaultsWithoutYAXIS = useMemo(
 		// NOTE: YAXIS vault deprecated in YIP-14

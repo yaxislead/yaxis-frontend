@@ -123,7 +123,7 @@ export const ExternalContracts = <const>[
 
 export type TExternalContracts = typeof ExternalContracts[number]
 
-export const Vaults = <const>['av3crv', 'atricrypto', 'avax', 'joewavax', 'wethavax', 'usdcusdc', 'avaxlink', 'avaxusdt', 'avaxptp', 'avaxgohm', 'avaxsavax', 'avaxwbtc', 'usdcjoe', 'avaxusdc']
+export const Vaults = <const>['av3crv', 'atricrypto', 'avax', 'joewavax', 'wethavax', 'usdcusdc', /*'avaxlink',*/ 'avaxusdt', /*'avaxptp', 'avaxgohm', 'avaxsavax', 'avaxwbtc',*/ 'usdcjoe', 'avaxusdc']
 export type TVaults = typeof Vaults[number]
 export interface Vault {
 	url: string
