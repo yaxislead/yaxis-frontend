@@ -1250,12 +1250,12 @@ export function useBoosts(): useUserBoostReturn {
 	const joewavax = useUserBoost('joewavax')
 	const wethavax = useUserBoost('wethavax')
 	const usdcusdc = useUserBoost('usdcusdc')
-	const avaxlink = useUserBoost('avaxlink')
+	// const avaxlink = useUserBoost('avaxlink')
 	const avaxusdt = useUserBoost('avaxusdt')
-	const avaxptp = useUserBoost('avaxptp')
-	const avaxgohm = useUserBoost('avaxgohm')
-	const avaxsavax = useUserBoost('avaxsavax')
-	const avaxwbtc = useUserBoost('avaxwbtc')
+	// const avaxptp = useUserBoost('avaxptp')
+	// const avaxgohm = useUserBoost('avaxgohm')
+	// const avaxsavax = useUserBoost('avaxsavax')
+	// const avaxwbtc = useUserBoost('avaxwbtc')
 	const usdcjoe = useUserBoost('usdcjoe')
 	const avaxusdc = useUserBoost('avaxusdc')
 
@@ -1276,12 +1276,12 @@ export function useBoosts(): useUserBoostReturn {
 			joewavax,
 			wethavax,
 			usdcusdc,
-			avaxlink,
+			// avaxlink,
 			avaxusdt,
-			avaxptp,
-			avaxgohm,
-			avaxsavax,
-			avaxwbtc,
+			// avaxptp,
+			// avaxgohm,
+			// avaxsavax,
+			// avaxwbtc,
 			usdcjoe,
 			avaxusdc,
 			steth
@@ -1300,12 +1300,12 @@ export function useBoosts(): useUserBoostReturn {
 		joewavax,
 		wethavax,
 		usdcusdc,
-		avaxlink,
+		// avaxlink,
 		avaxusdt,
-		avaxptp,
-		avaxgohm,
-		avaxsavax,
-		avaxwbtc,
+		// avaxptp,
+		// avaxgohm,
+		// avaxsavax,
+		// avaxwbtc,
 		usdcjoe,
 		avaxusdc,
 		steth

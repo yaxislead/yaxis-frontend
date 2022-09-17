@@ -24,7 +24,7 @@ export const Wallet: React.FC = () => {
 
 	const { account, error: walletError, chainId } = useWeb3React()
 
-	const [error, setError] = useState(getErrorMessage(walletError))
+	const [error, setError] = useState(walletError != undefined?getErrorMessage(walletError):"")
 
 	const unsupportedNetwork = useMemo(
 		() => chainId && !SUPPORTED_NETWORKS.includes(chainId),

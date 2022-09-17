@@ -260,12 +260,12 @@ export function useVaultsAPR() {
 	const joewavaxAvalanche = useVaultRewards('joewavax', 'avalanche')
 	const wethavaxAvalanche = useVaultRewards('wethavax', 'avalanche')
 	const usdcusdcAvalanche = useVaultRewards('usdcusdc', 'avalanche')
-	const avaxlinkAvalanche = useVaultRewards('avaxlink', 'avalanche')
+	// const avaxlinkAvalanche = useVaultRewards('avaxlink', 'avalanche')
 	const avaxusdtAvalanche = useVaultRewards('avaxusdt', 'avalanche')
-	const avaxptpAvalanche = useVaultRewards('avaxptp', 'avalanche')
-	const avaxgohmAvalanche = useVaultRewards('avaxgohm', 'avalanche')
-	const avaxsavaxAvalanche = useVaultRewards('avaxsavax', 'avalanche')
-	const avaxwbtcAvalanche = useVaultRewards('avaxwbtc', 'avalanche')
+	// const avaxptpAvalanche = useVaultRewards('avaxptp', 'avalanche')
+	// const avaxgohmAvalanche = useVaultRewards('avaxgohm', 'avalanche')
+	// const avaxsavaxAvalanche = useVaultRewards('avaxsavax', 'avalanche')
+	// const avaxwbtcAvalanche = useVaultRewards('avaxwbtc', 'avalanche')
 	const usdcjoeAvalanche = useVaultRewards('usdcjoe', 'avalanche')
 	const avaxusdcAvalanche = useVaultRewards('avaxusdc', 'avalanche')
 
@@ -329,13 +329,13 @@ export function useVaultsAPR() {
 					},
 					strategy: usdcusdc,
 				},
-				avaxlink: {
-					yaxisAPR: {
-						min: avaxlinkAvalanche.minAPR,
-						max: avaxlinkAvalanche.maxAPR,
-					},
-					strategy: avaxlink,
-				},
+				// avaxlink: {
+				// 	yaxisAPR: {
+				// 		min: avaxlinkAvalanche.minAPR,
+				// 		max: avaxlinkAvalanche.maxAPR,
+				// 	},
+				// 	strategy: avaxlink,
+				// },
 				avaxusdt: {
 					yaxisAPR: {
 						min: avaxusdtAvalanche.minAPR,
@@ -343,34 +343,34 @@ export function useVaultsAPR() {
 					},
 					strategy: avaxusdt,
 				},
-				avaxptp: {
-					yaxisAPR: {
-						min: avaxptpAvalanche.minAPR,
-						max: avaxptpAvalanche.maxAPR,
-					},
-					strategy: avaxptp,
-				},
-				avaxgohm: {
-					yaxisAPR: {
-						min: avaxgohmAvalanche.minAPR,
-						max: avaxgohmAvalanche.maxAPR,
-					},
-					strategy: avaxgohm,
-				},
-				avaxsavax: {
-					yaxisAPR: {
-						min: avaxsavaxAvalanche.minAPR,
-						max: avaxsavaxAvalanche.maxAPR,
-					},
-					strategy: avaxsavax,
-				},
-				avaxwbtc: {
-					yaxisAPR: {
-						min: avaxwbtcAvalanche.minAPR,
-						max: avaxwbtcAvalanche.maxAPR,
-					},
-					strategy: avaxwbtc,
-				},
+				// avaxptp: {
+				// 	yaxisAPR: {
+				// 		min: avaxptpAvalanche.minAPR,
+				// 		max: avaxptpAvalanche.maxAPR,
+				// 	},
+				// 	strategy: avaxptp,
+				// },
+				// avaxgohm: {
+				// 	yaxisAPR: {
+				// 		min: avaxgohmAvalanche.minAPR,
+				// 		max: avaxgohmAvalanche.maxAPR,
+				// 	},
+				// 	strategy: avaxgohm,
+				// },
+				// avaxsavax: {
+				// 	yaxisAPR: {
+				// 		min: avaxsavaxAvalanche.minAPR,
+				// 		max: avaxsavaxAvalanche.maxAPR,
+				// 	},
+				// 	strategy: avaxsavax,
+				// },
+				// avaxwbtc: {
+				// 	yaxisAPR: {
+				// 		min: avaxwbtcAvalanche.minAPR,
+				// 		max: avaxwbtcAvalanche.maxAPR,
+				// 	},
+				// 	strategy: avaxwbtc,
+				// },
 				usdcjoe: {
 					yaxisAPR: {
 						min: usdcjoeAvalanche.minAPR,
@@ -497,12 +497,12 @@ export function useVaults(): useVaultsReturn {
 	const joewavax = useVault('joewavax')
 	const wethavax = useVault('wethavax')
 	const usdcusdc = useVault('usdcusdc')
-	const avaxlink = useVault('avaxlink')
+	// const avaxlink = useVault('avaxlink')
 	const avaxusdt = useVault('avaxusdt')
-	const avaxptp = useVault('avaxptp')
-	const avaxgohm = useVault('avaxgohm')
-	const avaxsavax = useVault('avaxsavax')
-	const avaxwbtc = useVault('avaxwbtc')
+	// const avaxptp = useVault('avaxptp')
+	// const avaxgohm = useVault('avaxgohm')
+	// const avaxsavax = useVault('avaxsavax')
+	// const avaxwbtc = useVault('avaxwbtc')
 	const usdcjoe = useVault('usdcjoe')
 	const avaxusdc = useVault('avaxusdc')	
 
@@ -522,12 +522,12 @@ export function useVaults(): useVaultsReturn {
 			joewavax,
 			wethavax,
 			usdcusdc,
-			avaxlink,
+			// avaxlink,
 			avaxusdt,
-			avaxptp,
-			avaxgohm,
-			avaxsavax,
-			avaxwbtc,
+			// avaxptp,
+			// avaxgohm,
+			// avaxsavax,
+			// avaxwbtc,
 			usdcjoe,
 			avaxusdc,
 			steth,
@@ -547,12 +547,12 @@ export function useVaults(): useVaultsReturn {
 		joewavax,
 		wethavax,
 		usdcusdc,
-		avaxlink,
+		// avaxlink,
 		avaxusdt,
-		avaxptp,
-		avaxgohm,
-		avaxsavax,
-		avaxwbtc,
+		// avaxptp,
+		// avaxgohm,
+		// avaxsavax,
+		// avaxwbtc,
 		usdcjoe,
 		avaxusdc
 	])

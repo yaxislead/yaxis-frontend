@@ -44,9 +44,9 @@ type ExternalLpContractExtras = {
 
 type ExternalLpContract = {
 	gauge?: Contract
-	pool: Contract
+	pool?: Contract
 	token: Contract
-	rewards: Contract
+	rewards?: Contract
 	extraRewards?: ExternalLpContractExtras
 	currency: string
 }
@@ -156,70 +156,70 @@ export class AvalancheContracts {
 		for (const title of TraderJoeLPContracts) {
 			const traderjoePool = this.config.externalPools.traderjoe[title]
 			this.externalLP[title] = {
-				pool: new Contract( // unused
-					traderjoePool.pool,
-					abis[`CurvePoolABI`],
-					provider,
-				),
-				gauge: new Contract( // unused
-					traderjoePool.gauge,
-					abis.GaugeABI,
-					provider,
-				),
+				// pool: new Contract( // unused
+				// 	traderjoePool.pool,
+				// 	abis.CurvePoolABI,
+				// 	provider,
+				// ),
+				// gauge: new Contract( // unused
+				// 	traderjoePool.gauge,
+				// 	abis.GaugeABI,
+				// 	provider,
+				// ),
 				token: new Contract(
 					traderjoePool.token,
 					abis.TraderJoeTokenABI,
 					provider,
 				),
-				rewards: new Contract( // unused
-					traderjoePool.rewards,
-					abis.ConvexRewardPoolABI,
-					provider,
-				),
+				// rewards: new Contract( // unused
+				// 	traderjoePool.rewards,
+				// 	abis.ConvexRewardPoolABI,
+				// 	provider,
+				// ),
 				currency: traderjoePool.currency,
 			}
 		}
 		for (const title of SteakhutLPContracts) {
 			const steakhutPool = this.config.externalPools.steakhut[title]
 			this.externalLP[title] = {
-				pool: new Contract( // unused
-					steakhutPool.pool,
-					abis[`CurvePoolABI`],
-					provider,
-				),
-				gauge: new Contract( // unused
-					steakhutPool.gauge,
-					abis.GaugeABI,
-					provider,
-				),
+				// pool: new Contract( // unused
+				// 	steakhutPool.pool,
+				// 	abis[`CurvePoolABI`],
+				// 	provider,
+				// ),
+				// gauge: new Contract( // unused
+				// 	steakhutPool.gauge,
+				// 	abis.GaugeABI,
+				// 	provider,
+				// ),
 				token: new Contract(
 					steakhutPool.token,
 					abis.TraderJoeTokenABI,
 					provider,
 				),
-				rewards: new Contract( // unused
-					steakhutPool.rewards,
-					abis.ConvexRewardPoolABI,
-					provider,
-				),
+				// rewards: new Contract( // unused
+				// 	steakhutPool.rewards,
+				// 	abis.ConvexRewardPoolABI,
+				// 	provider,
+				// ),
 				currency: steakhutPool.currency,
 			}
 		}
 		for (const title of AaveLPContracts) {
 			const aavePool = this.config.externalPools.aave[title]
 			this.externalLP[title] = {
-				pool: new Contract( // unused
-					aavePool.pool,
-					abis[`CurvePoolABI`],
-					provider,
-				),
-				gauge: new Contract(aavePool.gauge, abis.GaugeABI, provider), // unused
+				// pool: new Contract( // unused
+				// 	aavePool.pool,
+				// 	abis[`CurvePoolABI`],
+				// 	provider,
+				// ),
+				// gauge: new Contract(aavePool.gauge, abis.GaugeABI, provider), // unused
 				token: new Contract(aavePool.token, abis.ERC20Abi, provider),
-				rewards: new Contract(
-					aavePool.rewards,
-					abis.AaveRewardsABI,
-					provider,
-				),
+				// rewards: new Contract(
+				// 	aavePool.rewards,
+				// 	abis.AaveRewardsABI,
+				// 	provider,
+				// ),
 				currency: aavePool.currency,
 			}
 		}
@@ -351,7 +351,7 @@ export class AvalancheContracts {
 					),
 				},
 				vault: new Contract(
-					this.config.vaults[vault].vault,
+					vaultConfig.vault,
 					abis.VaultABI,
 					provider,
 				),
@@ -364,7 +364,7 @@ export class AvalancheContracts {
 					),
 				},
 				gauge: new Contract(
-					this.config.vaults[vault].gauge,
+					vaultConfig.gauge,
 					abis.GaugeABI,
 					provider,
 				),
@@ -376,12 +376,12 @@ export class AvalancheContracts {
 						provider,
 					),
 				},
-				tokenPool: new Contract(
-					this.config.vaults[vault].tokenPoolContract,
+				tokenPool: vaultConfig.tokenPoolContract?new Contract(
+					vaultConfig.tokenPoolContract,
 					// TODO when joewavax make chef
 					abis.CurvePoolABI,
 					provider,
-				),
+				):null,
 			}
 		}
 	}
